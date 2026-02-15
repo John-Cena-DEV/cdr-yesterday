@@ -14,8 +14,13 @@ def fetch_cdr_data():
     USERNAME = 'qht_regrow'
     
     # Calculate yesterday's date
-    from_date = "2026-02-13 00:00:00"
-    to_date = "2026-02-13 23:59:59"
+# Get yesterday's date
+    yesterday = datetime.now() - timedelta(days=1)
+    yesterday_str = yesterday.strftime("%Y-%m-%d")  # e.g., "2026-02-13"
+    
+    # Define from_date and to_date
+    from_date = f"{yesterday_str} 00:00:00"
+    to_date = f"{yesterday_str} 23:59:59"
 
     
     print(f"📞 Fetching CDR data")
