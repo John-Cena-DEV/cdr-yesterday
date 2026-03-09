@@ -19,8 +19,8 @@ def fetch_cdr_data():
     yesterday_str = yesterday.strftime("%Y-%m-%d")  # e.g., "2026-02-13"
     
     # Define from_date and to_date
-    from_date = f"{yesterday_str} 00:00:00"
-    to_date = f"{yesterday_str} 23:59:59"
+    from_date = "2026-03-07 00:00:00"
+    to_date = "2026-03-07 23:59:59"
 
     
     print(f"📞 Fetching CDR data")
